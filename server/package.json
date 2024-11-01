@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@otjs/state-machine": "^0.2.2",
+    "@teamwork/websocket-json-stream": "^2.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.7.0",
+    "nodemon": "^3.1.7",
+    "rich-text": "^4.1.0",
+    "sharedb": "^5.0.4",
+    "sharedb-mongo": "^5.0.0",
+    "socket.io": "^4.8.0",
+    "socket.io-client": "^4.8.0",
+    "websocket-json-stream": "^0.0.3",
+    "ws": "^8.18.0",
+    "y-mongodb": "^0.1.11",
+    "y-websocket": "^2.0.4",
+    "yjs": "^13.6.19"
+  }
+}

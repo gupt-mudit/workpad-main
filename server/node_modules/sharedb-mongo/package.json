@@ -1,0 +1,42 @@
+{
+  "name": "sharedb-mongo",
+  "version": "5.0.0",
+  "description": "MongoDB database adapter for ShareDB",
+  "main": "index.js",
+  "dependencies": {
+    "mongodb": "^3.1.13 || ^4.0.0 || ^5.0.0 || ^6.0.0",
+    "sharedb": "^1.9.1 || ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0"
+  },
+  "devDependencies": {
+    "async": "^3.2.4",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.7",
+    "eslint": "^5.16.0",
+    "eslint-config-google": "^0.13.0",
+    "mocha": "^6.2.2",
+    "mongodb3": "npm:mongodb@^3.0.0",
+    "mongodb4": "npm:mongodb@^4.0.0",
+    "mongodb5": "npm:mongodb@^5.0.0",
+    "mongodb6": "npm:mongodb@^6.0.0",
+    "nyc": "^14.1.1",
+    "ot-json1": "^1.0.1",
+    "rich-text": "^4.1.0",
+    "sharedb-mingo-memory": "^1.0.0 || ^2.0.0 || ^3.0.0",
+    "sinon": "^9.2.4",
+    "sinon-chai": "^3.7.0"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --ignore-path .gitignore '**/*.js'",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "mocha",
+    "test:mongodb3": "_SHAREDB_MONGODB_DRIVER=mongodb3 npm test",
+    "test:mongodb4": "_SHAREDB_MONGODB_DRIVER=mongodb4 npm test",
+    "test:mongodb5": "_SHAREDB_MONGODB_DRIVER=mongodb5 npm test",
+    "test:mongodb6": "_SHAREDB_MONGODB_DRIVER=mongodb6 npm test",
+    "test:all": "npm run test:mongodb3 && npm run test:mongodb4 && npm run test:mongodb5 && npm run test:mongodb6",
+    "test-cover": "nyc --temp-dir=coverage -r text -r lcov npm run test:all"
+  },
+  "repository": "git://github.com/share/sharedb-mongo.git",
+  "author": "Nate Smith and Joseph Gentle",
+  "license": "MIT"
+}
